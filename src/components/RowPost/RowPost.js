@@ -6,6 +6,7 @@ import { API_KEY, img_url } from '../../constants/constant'
 function RowPost(props) {
   const [row, setrow] = useState([])
   const [urlId, setUrlId] = useState('')
+
   useEffect(() => {
     axios.get(props.url).then((response) =>{
       console.log(response.data);
@@ -31,6 +32,7 @@ function RowPost(props) {
       console.log(response.data);
       if (response.data.results.length !==0){
         setUrlId(response.data.results[0])
+        
       }else{
         console.log("Array is empty");
       }
