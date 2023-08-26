@@ -1,14 +1,20 @@
-.banner{
-  
-  background-size: cover;  
-  height: 550px;
-  color: white;
-  
-}
+.banner {
+    background-size: contain; /* Adjust the background image size */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center center; /* Center the background image */
+    height: 950px; /* Adjust the container height as needed */
+    color: white;
+  }
+
+  .banner-resized {
+    background-size: 100% 70%; /* Adjust the size percentage as needed */
+    width: 100%;
+  }
 
 
 .content{
-    padding-top: 140px;
+    align-items: center;
+    padding-top: 500px;
     height: 190px;
     padding-left: 15px;
 }
@@ -51,7 +57,7 @@
 }
 
 .fade_bottom{
-    padding: 10rem;
+    padding: 25rem;
     height: 10rem;
     background-image: linear-gradient(180deg, transparent, rgba(37,37,61), #111);
 }

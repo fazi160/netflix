@@ -17,8 +17,8 @@ function Banner() {
   
 
   return (
-    <div
-     style={{backgroundImage: `url(${movie ? img_url+movie.backdrop_path :""})`}}>
+    <div className='banner banner-resized'
+     style={{backgroundImage: `url(${movie ? img_url+movie.backdrop_path :""})`}} loading="lazy" >
     <div className='banner'>
       <div className='content'>
         <h1 className='title'>{movie ? movie.title: ''}</h1>

@@ -3,9 +3,10 @@ import './RowPost.css'
 import axios from '../../axios'
 import YouTube from 'react-youtube';
 import { API_KEY, img_url } from '../../constants/constant'
+
 function RowPost(props) {
   const [row, setrow] = useState([])
-  const [urlId, setUrlId] = useState('')
+  const [urlId, setUrlId] = useState(null)
 
   useEffect(() => {
     axios.get(props.url).then((response) =>{
@@ -27,7 +28,11 @@ function RowPost(props) {
     },
   };
   const handleMovie = (id)=>{
-    console.log(id);
+    if (urlId === id) {
+      console.log(id);
+      setUrlId(null);
+    }else{
+    
     axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
       console.log(response.data);
       if (response.data.results.length !==0){
@@ -38,7 +43,7 @@ function RowPost(props) {
       }
 
     })
-  }
+  }}
   return (
     <div className='row'>
       <h2>{props.title}</h2>

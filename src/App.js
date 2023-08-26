@@ -12,12 +12,12 @@ function App() {
       <Banner/>
       <RowPost url={orginals} title='Netflix Orginals'/>
       <RowPost url={action} title='Action' isSmall/>
-      <RowPost url={trending} title='Action' isSmall/>
-      <RowPost url={ComedyMovies} title='Action' isSmall/>
-      <RowPost url={HorrorMovies} title='Action' isSmall/>
-      <RowPost url={ActionMovies} title='Action' isSmall/>
-      <RowPost url={RomanceMovies} title='Action' isSmall/>
-      <RowPost url={Documentaries} title='Action' isSmall/>
+      <RowPost url={trending} title='Trending' isSmall/>
+      <RowPost url={ComedyMovies} title='Comedy Movies' isSmall/>
+      <RowPost url={HorrorMovies} title='Horror Movies' isSmall/>
+      <RowPost url={ActionMovies} title='Action Movies' isSmall/>
+      <RowPost url={RomanceMovies} title='Romance Movies' isSmall/>
+      <RowPost url={Documentaries} title='Documentaries' isSmall/>
       
     </div>
   );
